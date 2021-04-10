@@ -1,49 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
-    android:padding="10dp"
-    tools:context=".View.MainActivity"
-    android:background="@color/white">
+    tools:context=".View.MainActivity">
 
-    <TextView
-        android:id="@+id/title"
+    <LinearLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Medicine Time"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:background="@color/green"
+        android:padding="10dp">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleviewID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:nestedScrollingEnabled="true"
-        android:layout_below="@id/title"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medicine Time"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp">
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/addTimeID"
-            android:layout_width="wrap_content"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleviewID"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_margin="16dp"
-            android:backgroundTint="@color/yellow"
-            android:text="Add Time"
-            android:textAllCaps="false"
-            android:textStyle="bold"
-            app:icon="@drawable/add_icon"
-            app:layout_anchorGravity="bottom|right|end" />
+            android:layout_marginTop="10dp"
+            android:nestedScrollingEnabled="true" />
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-</RelativeLayout>
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/addTimeID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/special_color"
+                android:text="Add Time"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:icon="@drawable/add_icon"
+                app:layout_anchorGravity="bottom|right|end" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -50,11 +50,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        try {
-            this.getSupportActionBar().hide();
-        } catch (Exception e) {
-        }
-
         dbhelper = new SQLiteHelper(this);
         layoutManager = new LinearLayoutManager(this);
 

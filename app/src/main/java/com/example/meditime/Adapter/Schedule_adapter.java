@@ -24,10 +24,6 @@ public class Schedule_adapter extends RecyclerView.Adapter<Schedule_adapter.AppV
         this.recyclerviewClickInterfaces = recyclerviewClickInterfaces;
     }
 
-    public Schedule_adapter(ArrayList<SchedulePOJO> arrayList) {
-        this.arrayList = arrayList;
-    }
-
     @NonNull
     @Override
     public AppViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
